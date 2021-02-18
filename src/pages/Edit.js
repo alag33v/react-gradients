@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 import { BiArrowBack } from 'react-icons/bi';
 import { editGradient } from '../redux/ducks/gradientDucks';
-import { StyledNew } from '../styles/pages/StyledNew';
+import { StyledEdit } from '../styles/pages/StyledEdit';
 
 const Edit = props => {
   const history = useHistory();
@@ -41,7 +41,7 @@ const Edit = props => {
   };
 
   return (
-    <StyledNew>
+    <StyledEdit>
       <Formik
         initialValues={initialValues}
         validate={validate}
@@ -73,7 +73,7 @@ const Edit = props => {
         }}
       </Formik>
       <BiArrowBack className='back' onClick={onComeBack} />
-    </StyledNew>
+    </StyledEdit>
   );
 };
 

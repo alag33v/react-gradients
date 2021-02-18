@@ -15,11 +15,29 @@ export const StyledHome = styled.div`
 
   h2 {
     font-size: 30px;
+
+    @media (max-width: 400px) {
+      font-size: 24px;
+    }
   }
 
   .victory {
     margin-left: 10px;
     width: 28px;
     height: 28px;
+  }
+
+  .circle {
+    fill: black;
+    animation: infinite-spinning 5s linear infinite;
+  }
+
+  @keyframes infinite-spinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 `;

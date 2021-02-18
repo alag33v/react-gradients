@@ -15,6 +15,7 @@ export const StyledHome = styled.div`
     list-style: none;
     height: 100px;
     width: 800px;
+    max-width: 100%;
     margin-bottom: 25px;
     position: relative;
     cursor: pointer;
@@ -61,6 +62,12 @@ export const StyledHome = styled.div`
     &:active {
       background-color: rgb(47 26 191);
     }
+
+    @media (max-width: 500px) {
+      font-size: 16px;
+      padding: 15px;
+      width: 300px;
+    }
   }
 
   .edit {
@@ -96,6 +103,7 @@ export const GradientItem = styled.div`
   ${({ firstColor, secondColor }) =>
     `background: linear-gradient(90deg, ${firstColor} 0%, ${secondColor} 100%);`}
   border-radius: 5px;
-  height: 100px;
   width: 800px;
+  max-width: 100%;
+  height: 100px;
 `;

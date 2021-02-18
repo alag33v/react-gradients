@@ -8,7 +8,7 @@ const Header = () => (
       <h2>Gradients</h2>
       <BiWinkSmile className='victory' />
     </Link>
-    <svg width='80' height='80'>
+    <svg className='circle' width='80' height='80'>
       <linearGradient id='linearColors' x1='0' y1='0' x2='1' y2='1'>
         <stop offset='5%' stopColor='#01E400'></stop>
         <stop offset='25%' stopColor='#FEFF01'></stop>

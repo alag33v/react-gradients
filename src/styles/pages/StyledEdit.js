@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNew = styled.div`
+export const StyledEdit = styled.div`
   position: relative;
 
   .input__wrapper {
