@@ -28,11 +28,11 @@ const New = () => {
 
   const onSubmit = values => {
     dispatch(addNewGradient(values));
-    history.push('/');
+    history.push('/react-gradients');
   };
 
   const onComeBack = () => {
-    history.push('/');
+    history.push('/react-gradients');
   };
 
   return (

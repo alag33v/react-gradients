@@ -4,7 +4,7 @@ import { StyledHome } from '../styles/pages/StyledHeader';
 
 const Header = () => (
   <StyledHome>
-    <Link className='header-left__wrapper' to='/'>
+    <Link className='header-left__wrapper' to='/react-gradients'>
       <h2>Gradients</h2>
       <BiWinkSmile className='victory' />
     </Link>

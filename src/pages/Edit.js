@@ -33,11 +33,11 @@ const Edit = props => {
 
   const onSubmit = values => {
     dispatch(editGradient(values));
-    history.push('/');
+    history.push('/react-gradients');
   };
 
   const onComeBack = () => {
-    history.push('/');
+    history.push('/react-gradients');
   };
 
   return (

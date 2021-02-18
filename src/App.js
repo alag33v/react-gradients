@@ -8,7 +8,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/react-gradients' component={Home} />
         <Route exact path='/new' component={New} />
         <Route exact path='/edit/:id' component={Edit} />
       </Switch>
