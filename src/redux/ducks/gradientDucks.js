@@ -39,7 +39,6 @@ const gradientDucks = (state = initialState, action) => {
 };
 
 // Action Creators
-
 export const addNewGradient = obj => ({
   type: NEW_GRADIENT,
   payload: obj

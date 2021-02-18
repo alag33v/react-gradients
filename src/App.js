@@ -8,9 +8,9 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path='/react-gradients' component={Home} />
-        <Route exact path='/new' component={New} />
-        <Route exact path='/edit/:id' component={Edit} />
+        <Route path='/react-gradients' component={Home} />
+        <Route path='/new' component={New} />
+        <Route path='/edit/:id' component={Edit} />
       </Switch>
     </Router>
   );
