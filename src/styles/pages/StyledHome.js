@@ -63,6 +63,20 @@ export const StyledHome = styled.div`
     }
   }
 
+  .edit {
+    fill: #ccc;
+    width: 24px;
+    height: 24px;
+    top: 5px;
+    right: 40px;
+    position: absolute;
+    transition: 0.3s;
+
+    &:hover {
+      fill: #fff;
+    }
+  }
+
   .delete {
     fill: #ccc;
     width: 30px;

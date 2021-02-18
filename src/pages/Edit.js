@@ -1,18 +1,23 @@
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 import { BiArrowBack } from 'react-icons/bi';
-import { addNewGradient } from '../redux/ducks/gradientDucks';
+import { editGradient } from '../redux/ducks/gradientDucks';
 import { StyledNew } from '../styles/pages/StyledNew';
 
-const New = () => {
+const Edit = props => {
   const history = useHistory();
+  const gradients = useSelector(({ gradient }) => gradient.gradients);
   const dispatch = useDispatch();
 
+  const gradientsFilter = gradients.filter(gradient => {
+    return gradient.id === props.match.params.id;
+  });
+
   const initialValues = {
-    id: Date.now().toString(),
-    firstColor: '',
-    secondColor: ''
+    id: gradientsFilter[0].id,
+    firstColor: gradientsFilter[0].firstColor,
+    secondColor: gradientsFilter[0].secondColor
   };
 
   const validate = values => {
@@ -27,7 +32,7 @@ const New = () => {
   };
 
   const onSubmit = values => {
-    dispatch(addNewGradient(values));
+    dispatch(editGradient(values));
     history.push('/');
   };
 
@@ -61,7 +66,7 @@ const New = () => {
                 type='submit'
                 disabled={isSubmitting}
               >
-                Add
+                Edit
               </button>
             </Form>
           );
@@ -72,4 +77,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Edit;
