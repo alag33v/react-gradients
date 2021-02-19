@@ -10,7 +10,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const onEdit = id => {
-    history.push(`edit/${id}`);
+    history.push(`/edit/${id}`);
   };
 
   const onDeleteGradient = id => {
